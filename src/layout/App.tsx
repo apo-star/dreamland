@@ -2,12 +2,12 @@ import "../assets/css/App.css";
 import { Perf } from "r3f-perf";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { SpringLand } from "../componentsFor3D/lands/springland";
+import { Farm } from "../app-3d/lands/farm";
 
 function App() {
   return (
     <Canvas>
-      <SpringLand />
+      <Farm />
       <Perf position="top-left" />
       <Environment preset="city" />
       <OrbitControls makeDefault />
