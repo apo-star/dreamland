@@ -1,4 +1,5 @@
-import { FarmFloor } from "../../models/floors/farm";
+import { FarmFloor } from "../../basicModels/floors/farm";
+import { Mill } from "../../models/buildings/farm/mill";
 
 export const Farm = () => {
   return (
@@ -8,6 +9,7 @@ export const Farm = () => {
         <boxGeometry />
       </mesh>
       <FarmFloor />
+      <Mill />
     </group>
   );
 };
