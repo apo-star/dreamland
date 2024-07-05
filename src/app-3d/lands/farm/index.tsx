@@ -1,15 +1,11 @@
 import { FarmFloor } from "../../basicModels/floors/farm";
-import { Mill } from "../../models/buildings/farm/mill/Mill";
-
+import { Mill } from "../../models/buildings/farm/Mill/Mill";
+import { MonitorLoftedBarn } from "../../models/buildings/farm/MonitorLoftedBarn";
 export const Farm = () => {
   return (
     <group>
-      <mesh>
-        <meshStandardMaterial />
-        <boxGeometry />
-      </mesh>
       <FarmFloor />
-      <Mill />
+      <MonitorLoftedBarn />
     </group>
   );
 };
