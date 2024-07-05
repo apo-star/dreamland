@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useMemo } from "react";
 import { RepeatWrapping, TextureLoader } from "three";
 import { ITexture } from "../../types/texture";

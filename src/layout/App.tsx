@@ -6,7 +6,9 @@ import { Farm } from "../app-3d/lands/farm";
 
 function App() {
   return (
-    <Canvas>
+    <Canvas
+      camera={{ fov: 30, far: 2000, near: 0.01, position: [0, 100, 100] }}
+    >
       <Farm />
       <Perf position="top-left" />
       <Environment preset="city" />

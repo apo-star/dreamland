@@ -1,5 +1,5 @@
 import { FarmFloor } from "../../basicModels/floors/farm";
-import { Mill } from "../../models/buildings/farm/mill";
+import { Mill } from "../../models/buildings/farm/mill/Mill";
 
 export const Farm = () => {
   return (
