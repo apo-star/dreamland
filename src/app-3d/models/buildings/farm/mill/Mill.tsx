@@ -1,6 +1,8 @@
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -26,9 +28,15 @@ type GLTFResult = GLTF & {
 };
 
 export const Mill = (props: JSX.IntrinsicElements["group"]) => {
+  const wingRef = useRef<any>();
   const { nodes, materials } = useGLTF(
     "./assets/models/farm buildings/mill.glb"
   ) as GLTFResult;
+
+  useFrame((_, delta) => {
+    wingRef.current.rotation.y += 0.6 * delta;
+  });
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.025}>
@@ -53,8 +61,10 @@ export const Mill = (props: JSX.IntrinsicElements["group"]) => {
           material={materials.White_10}
         />
         <mesh
+          ref={wingRef}
           geometry={nodes.Object_19.geometry}
           material={materials.LightBrown_00}
+          position={[-0.457, -33.305, 107.41]}
         />
         <mesh
           geometry={nodes.Object_2.geometry}
